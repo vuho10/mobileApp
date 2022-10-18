@@ -1,254 +1,64 @@
-/* eslint-disable react-native/no-inline-styles */
-import React, {useState} from 'react';
-import {Text, View, TouchableOpacity} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import React from "react";
+import { ImageBackground, StyleSheet, Text, View } from "react-native";
 
-function Direction() {
-  const [direction, setDirection] = useState("ltr");
 
-  return (
-    <PreviewDirection
-      label="direction"
-      selectedValue={direction}
-      values={["ltr", "rtl"]}
-      setSelectedValue={setDirection}>
-      <View
-        style={[styles.box, { backgroundColor: "powderblue" }]}
-      />
-      <View
-        style={[styles.box, { backgroundColor: "skyblue" }]}
-      />
-      <View
-        style={[styles.box, { backgroundColor: "steelblue" }]}
-      />
-    </PreviewDirection>
-  );
-}
 
-const PreviewDirection = ({
-  label,
-  children,
-  values,
-  selectedValue,
-  setSelectedValue,
-}) => (
-  <View style={{ padding: 10, flex: 1 }}>
-    <Text style={styles.label}>{label}</Text>
-    <View style={styles.row}>
-      {values.map((value) => (
-        <TouchableOpacity
-          key={value}
-          onPress={() => setSelectedValue(value)}
-          style={[
-            styles.button,
-            selectedValue === value && styles.selected,
-          ]}
-        >
-          <Text
-            style={[
-              styles.buttonLabel,
-              selectedValue === value && styles.selectedLabel,
-            ]}
-          >
-            {value}
-          </Text>
-        </TouchableOpacity>
-      ))}
+// const imageBanner = { uri:'./img/Mask Group.png' };
+
+const App = () => (
+  <View>
+    <View style={styles.pathContent}>
+      <ImageBackground
+        source={require('./img/Group1156.png')}
+        style={styles.path}
+      >
+      </ImageBackground>
+      <Text style={styles.pathText}>Diabetes Care</Text>
+
     </View>
-    <View style={[styles.container, { [label]: selectedValue }]}>
-      {children}
+    <View style={styles.banner}>
+      <ImageBackground source={require('./img/MaskGroup.png')} style={styles.logoBanner}>
+        <Text style={styles.text}>Save extra on every order</Text>
+        <Text>Etiam mollis metus non faucibus sollicitudin. </Text>
+      </ImageBackground>
     </View>
   </View>
+
 );
 
-function JustifyContent() {
+const styles = StyleSheet.create({
+  pathContent: {
+    paddingTop: 10,
+    flexDirection: "row",
 
- const [justifyContent, setJustifyContent] = useState("flex-start");
-
-  return (
-    <PreviewJustifyContent
-      label="justifyContent"
-      selectedValue={justifyContent}
-      values={[
-        "flex-start",
-        "flex-end",
-        "center",
-        "space-between",
-        "space-around",
-        "space-evenly",
-      ]}
-      
-      setSelectedValue={setJustifyContent}
-    >
-      <View
-        style={[styles.box, { backgroundColor: "powderblue" }]}
-      />
-      <View
-        style={[styles.box, { backgroundColor: "skyblue" }]}
-      />
-      <View
-        style={[styles.box, { backgroundColor: "steelblue" }]}
-      />
-    </PreviewJustifyContent>
-  );
-}
-
-const PreviewJustifyContent = ({
-  label,
-  children,
-  values,
-  selectedValue,
-  setSelectedValue,
-}) => (
-  <View style={{ padding: 10, flex: 1 }}>
-    <Text style={styles.label}>{label}</Text>
-    <View style={styles.row}>
-      {values.map((value) => (
-        <TouchableOpacity
-          key={value}
-          onPress={() => setSelectedValue(value)}
-          style={[styles.button, selectedValue === value && styles.selected]}
-        >
-          <Text
-            style={[
-              styles.buttonLabel,
-              selectedValue === value && styles.selectedLabel,
-            ]}
-          >
-            {value}
-          </Text>
-        </TouchableOpacity>
-      ))}
-    </View>
-    <View style={[styles.container, {[label]: selectedValue }]}>
-      {children}
-    </View>
-  </View>
-);
-
-function SecondScreen() {
-  const [position, setPosition] = useState('relative');
-  const values = ['relative', 'absolute'];
-
-  return (
-    <View style={{padding: 10, flex: 1}}>
-      <View style={styles.row}>
-        {values.map(value => (
-          <TouchableOpacity
-            key={value}
-            onPress={() => setPosition(value)}
-            style={[styles.button, position === value && styles.selected]}>
-            <Text
-              style={[
-                styles.buttonLabel,
-                position === value && styles.selectedLabel,
-              ]}>
-              {value}
-            </Text>
-          </TouchableOpacity>
-        ))}
-      </View>
-      <View style={styles.container}>
-        <View
-          style={[
-            styles.box,
-            {
-              top: 25,
-              left: 25,
-              position,
-              backgroundColor: 'powderblue',
-            },
-          ]}
-        />
-        <View
-          style={[
-            styles.box,
-            {
-              top: 50,
-              left: 50,
-              position,
-              backgroundColor: 'skyblue',
-            },
-          ]}
-        />
-        <View
-          style={[
-            styles.box,
-            {
-              top: 75,
-              left: 75,
-              position,
-              backgroundColor: 'steelblue',
-            },
-          ]}
-        />
-      </View>
-    </View>
-  );
-}
-
-const Tab = createBottomTabNavigator();
-
-function Tabs() {
-  return (
-    <Tab.Navigator>
-      <Tab.Screen name="direction" component={Direction}/>
-      <Tab.Screen name="position" component={SecondScreen}/>
-      <Tab.Screen name="justify Content" component={JustifyContent} />
-    </Tab.Navigator>
-  );
-}
-
-const styles = {
-  container: {
-    flex: 1,
-    marginTop: 8,
-    backgroundColor: 'grey',
   },
-  box: {
-    width: 50,
-    height: 50,
+  pathText: {
+    marginLeft: 20,
   },
-  row: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+  path: {
+    width: 24,
+    height: 24,
+
+    padding: 10,
   },
-  button: {
-    paddingHorizontal: 8,
-    paddingVertical: 6,
-    borderRadius: 4,
-    backgroundColor: 'oldlace',
-    alignSelf: 'flex-start',
-    marginHorizontal: '1%',
-    marginBottom: 6,
-    minWidth: '48%',
-    textAlign: 'center',
+  banner: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+
   },
-  selected: {
-    backgroundColor: 'coral',
-    borderWidth: 0,
-  },
-  buttonLabel: {
-    fontSize: 12,
-    fontWeight: '500',
-    color: 'coral',
-  },
-  selectedLabel: {
-    color: 'white',
-  },
-  label: {
-    textAlign: 'center',
-    marginBottom: 10,
-    fontSize: 24,
-  },
-};
+  logoBanner: {
+    width: 380,
+    height: 140,
+    resizeMode: "cover"
+
+    // flex:1,
 
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Tabs />
-    </NavigationContainer>
-  );
-}
+  },
+
+});
+
+export default App;
