@@ -7,6 +7,23 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     paddingHorizontal: 24,
   },
+  pathContent: {
+    paddingTop: 10,
+    flexDirection: "row",
+
+  },
+  pathText: {
+    marginLeft: 10,
+    fontWeight: "700",
+    fontSize: 16,
+
+
+  },
+  pathImg: {
+    width: 24,
+    height: 24,
+
+  },
   banner: {
     height: 140,
     overflow: 'hidden',
@@ -23,7 +40,8 @@ const styles = StyleSheet.create({
     top: 28,
     left: 24,
     maxWidth: 124,
-    color: 'red',
+    color: "FFC000",
+
   },
   banner__content__title: {
     color: '#1987FB',
@@ -35,7 +53,7 @@ const styles = StyleSheet.create({
     color: 'black',
     fontWeight: '300',
   },
-  // Title
+
   title: {
     marginVertical: 20,
     color: 'black',
@@ -43,15 +61,14 @@ const styles = StyleSheet.create({
     textAlign: 'left',
   },
   star: {
-    backgroundColor: 'red',
     color: '#FFFFFF'
 
   },
+
   // Product
   product__price: {
     color: '#090F47',
     fontWeight: '600',
-    // backgroundColor: 'green'
   },
   none: {
     display: 'none',
@@ -70,8 +87,13 @@ const styles = StyleSheet.create({
   },
   black: {
     color: 'black'
+  },
+  // all popular
+
+  title_popular: {
+    // bottom: 370,
   }
 
-  
+
 });
 export default styles;

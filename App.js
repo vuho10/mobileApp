@@ -1,26 +1,38 @@
 import React from "react";
-import { View,ScrollView } from "react-native";
+import { View, ScrollView } from "react-native";
 import styles from './styles';
+import Path from "./components/Path";
 import Banner from './components/Banner';
 import Title from './components/Title';
 import Products from './components/Products';
+import TitlePopular from './components/TitlePopular';
+import PopularProduct from "./components/PopularProduct";
 
 const App = () => (
 
   <View style={styles.container}>
-  <Banner 
-    img={require('./img/bg.png')}
-    title="Lorem ipsum dolor sit amet consectetur."
-    desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, dicta."
+    <Path img={require('./img/Group1156.png')} />
+    <Banner
+      img={require('./img/bg.png')}
+      title="Lorem ipsum dolor sit amet consectetur."
+      desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, dicta."
     />
-  <Title title="Diabetic Diet" />
-  <ScrollView horizontal={true} style={styles.slider}>
-    <Products img={require('./img/MaskGroup.png')} starNumber={'⭐' + 4} price={234} name='what you know about' sale={true}/>
-    <Products img={require('./img/MaskGroup.png')} starNumber={'⭐' + 4} price={234} name='what you know about' sale={true}/>
-    <Products img={require('./img/MaskGroup.png')} starNumber={'⭐' + 4} price={234} name='what you know about' sale={true}/>
-    <Products img={require('./img/MaskGroup.png')} starNumber={'⭐' + 4} price={234} name='what you know about' sale={true}/>
-  </ScrollView>
-</View>
+    <Title title="Diabetic Diet" />
+    <ScrollView horizontal={true}>
+      <Products img={require('./img/p1.png')} starNumber={'⭐'} name='Sugar Substitute' sale={true} />
+      <Products img={require('./img/p2.png')} price={580} name='Juices & Vinegars' sale={true} />
+      <Products img={require('./img/p3.png')} starNumber={'⭐'} name='Vitamins Medicines' sale={true} />
+      <Products img={require('./img/p1.png')} starNumber={'⭐'}  name='Sugar ' sale={true} />
+    </ScrollView>
+    <TitlePopular title="All Products"/>
+    <ScrollView>
+      <PopularProduct img={require('./img/image21.png')}/>
+      <PopularProduct img={require('./img/image22.png')}/>
+      <PopularProduct img={require('./img/image23.png')}/>
+      <PopularProduct img={require('./img/image20.png')}/>
+    </ScrollView>
+    
+  </View>
   // <View style={styles.container}>
   //   <View style={styles.pathContent}>
   //     <ImageBackground
