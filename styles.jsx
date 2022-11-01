@@ -88,10 +88,16 @@ const styles = StyleSheet.create({
   black: {
     color: 'black'
   },
-  // all popular
+
 
   title_popular: {
     // bottom: 370,
+   
+  },
+
+  popularPr:{
+    marginRight:20,
+    backgroundColor:"yellow"
   }
 
 
