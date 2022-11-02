@@ -17,9 +17,6 @@ const PopularProduct = (props) => {
                     <Text style={styles.p_prices}>
                         590
                     </Text>
-                    <Text>
-
-                    </Text>
                 </View>
             </View>
         </ScrollView>

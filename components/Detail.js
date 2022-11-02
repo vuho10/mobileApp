@@ -6,8 +6,7 @@ function Detail({ navigation }) {
         <Text> HELLO Details Screen</Text>
         <Button
                     title="Go to Home"
-                    onPress={() => navigation.navigate('Home')}
-                />
+                    onPress={() => navigation.navigate('Home')}/>
       </View>
     );
   }

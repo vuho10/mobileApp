@@ -88,18 +88,20 @@ const styles = StyleSheet.create({
   black: {
     color: 'black'
   },
-
-
-  title_popular: {
-    // bottom: 370,
-   
+  titlePo: {
+    marginTop: 20,
+    marginBottom: 10,
   },
+  popularPr: {
+    marginRight: 20,
+    backgroundColor:"yellow",
+    borderRadius:10,
+  }, 
+  allProduct: {
+    marginTop: -120,
+    marginBottom:10,
 
-  popularPr:{
-    marginRight:20,
-    backgroundColor:"yellow"
   }
-
 
 });
 export default styles;
