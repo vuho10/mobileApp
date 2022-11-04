@@ -1,14 +1,19 @@
 import react from "react";
 import { View, Text, Image, ScrollView } from "react-native";
-import styles from "../styles";
+import styles from "../../styles";
 const PopularProduct = (props) => {
     return (
         <ScrollView>
             <View style={styles.popularPr}>
-                <Text style={styles.sales}>
-                    Sale
-                </Text>
-                <Image source={props.img} style={styles.product__img} />
+                <View style={styles.sales}>
+                    <Text style={styles.textSale}>
+                        Sale
+                    </Text>
+                </View>
+
+                <View style={styles.card}>
+                    <Image source={props.img} style={styles.product__img} />
+                </View>
 
                 <Text>
                     Accu-check Active

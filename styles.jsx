@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
   product__img: {
     width: '100%',
     resizeMode: 'cover',
+    // position:"relative",
     height: 100
   },
   black: {
@@ -94,14 +95,39 @@ const styles = StyleSheet.create({
   },
   popularPr: {
     marginRight: 20,
-    backgroundColor:"yellow",
-    borderRadius:10,
-  }, 
+    // backgroundColor:"yellow",
+    borderRadius: 10,
+    position:"relative",
+
+  },
   allProduct: {
     marginTop: -120,
-    marginBottom:10,
+    marginBottom: 10,
 
+  },
+  // PopularProduct
+  sales: {
+    backgroundColor: "#ff5a5a",
+    marginTop: -30,
+    marginLeft: -30,
+    height: 70,
+    width: 80,
+ 
+    
+    transform: [
+      { rotate: "-45deg"},
+
+    ]
+
+  },
+  textSale: {
+    marginTop: 40,
+    marginLeft:25,
+  },
+  bTabIcon:{
+    fontSize:18,
   }
+
 
 });
 export default styles;
