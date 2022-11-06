@@ -126,7 +126,18 @@ const styles = StyleSheet.create({
   },
   bTabIcon:{
     fontSize:18,
-  }
+  },
+// ----------------------------------midterm-test/map
+containerViewMap: {
+  ...StyleSheet.absoluteFillObject,
+  height: 400,
+  width: 400,
+  justifyContent: 'flex-end',
+  alignItems: 'center',
+},
+map: {
+  ...StyleSheet.absoluteFillObject,
+},
 
 
 });

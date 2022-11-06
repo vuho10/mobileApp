@@ -1,9 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-// import Home from '../screen/HomeScreen';
-import Home from '../screen/HomeScreen';
-import Profile from '../screen/ProfileScreen';
-import Detail from '../detail/Detail';
+
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+
 import styles from '../../styles';
 
 const Tab = createBottomTabNavigator();
@@ -24,7 +22,7 @@ function Tabs() {
                             />
 
                         );
-                    } else if (route.name === 'Profile') {
+                    } else if (route.name === 'Shop') {
                         return (
                             <FontAwesome5
                                 name="user"
@@ -33,7 +31,7 @@ function Tabs() {
                                 style={styles.bTabIcon}
                             />
                         );
-                    } else if (route.name === 'Detail') {
+                    } else if (route.name === 'My') {
                         return (
                             <FontAwesome5
                                 name="asterisk"
@@ -46,11 +44,10 @@ function Tabs() {
                 },
 
             })}
-
         >
-            <Tab.Screen name="Home" component={Home} />
-            <Tab.Screen name="Profile" component={Profile} />
-            <Tab.Screen name="Detail" component={Detail} />
+            <Tab.Screen name="Home" component={Home}/>
+            <Tab.Screen name="Shop" component={Shop}/>
+            <Tab.Screen name="My" component={My}/>
         </Tab.Navigator>
 
     );
