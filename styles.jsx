@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
 
   containerViewMap: {
     ...StyleSheet.absoluteFillObject,
-    height: 400,
+    height: 300,
     width: 400,
     justifyContent: 'flex-end',
     alignItems: 'center',
@@ -214,19 +214,19 @@ const styles = StyleSheet.create({
 
   , text_buy: {
     marginBottom: 10,
-    fontWeight:'bold',
+    fontWeight: 'bold',
 
   }
   // products
   , product_content: {
-    // flexDirection:'row',
+
     backgroundColor: '#a0b74f',
     borderRadius: 30,
     overflow: 'hidden',
     height: 110,
     alignItems: 'center',
     marginRight: 20,
-    
+
   }
   , products_container: {
     flexDirection: 'row',
@@ -235,24 +235,84 @@ const styles = StyleSheet.create({
 
   },
   products_name: {
-    marginTop:50,
+    marginTop: 50,
     fontSize: 40,
-    color:"black",
-    marginBottom:20,
-    fontWeight:'bold',
+    color: "black",
+    marginBottom: 20,
+    fontWeight: 'bold',
   },
   products_prices: {
     fontSize: 15,
     marginLeft: 80,
-    fontWeight:'bold',
+    fontWeight: 'bold',
 
   },
   product_img: {
     width: 140,
     resizeMode: 'contain',
     height: 100
-  }, product_scroll: {
+  },
+  product_scroll: {
     marginTop: 30,
-  }
+  },
+  // products_shop: {
+  //   marginTop: 90,
+  // }
+  details_color: {
+    backgroundColor: "#a0b74f",
+    // marginTop:-60,
+  },
+  products_detail: {
+    width: 300,
+    resizeMode: 'contain',
+    height: 500
+  }, shop_details: {
+    // backgroundColor: "#a0b74f",
+    alignItems: 'center',
+    marginTop: 100,
+  },
+  name_detail: {
+    marginTop: -200,
+    marginLeft: 30,
+    fontSize: 20,
+    color: "#ffa0a0"
+
+  },
+
+  btn_add_to_cart: {
+    backgroundColor: '#ffa0a0',
+    borderRadius: 40,
+    // overflow: 'hidden',
+    width: 100,
+    height: 30,
+    alignItems: 'center',
+    alignSelf: 'flex-end',
+    shadowColor: "#000",
+
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    },
+    shadowOpacity: 0.39,
+    shadowRadius: 8.30,
+
+    elevation: 13,
+  },
+
+  searchBox: {
+    // position:'absolute', 
+    marginBottom: -250,
+    flexDirection: "row",
+    backgroundColor: '#fff',
+    width: '90%',
+    alignSelf: 'center',
+    borderRadius: 5,
+    padding: 10,
+    shadowColor: '#ccc',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
+    elevation: 10,
+  },
 });
 export default styles;

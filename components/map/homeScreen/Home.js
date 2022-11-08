@@ -31,16 +31,46 @@ const Home = ({ navigation }) => {
 
             </View>
             <ScrollView horizontal={true} style={styles.Category_container_scr}>
-                <TouchableOpacity onPress={() => navigation.navigate('Shop')}>
+                <TouchableOpacity
+
+                    onPress={() => {
+                        navigation.navigate('Shop', {
+                            image: require('../../../img/sua6.png'),
+                            name: "sua tuoi",
+                            btn:'ADD TO CART'
+                        });
+                    }}
+
+                >
                     <Category img={require('../../../img/sua6.png')} Category_name='Sữa' Category_name_product='sữa tươi' />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Shop')}>
+                <TouchableOpacity onPress={() => {
+                    navigation.navigate('Shop', {
+                        image: require('../../../img/sua7.png'),
+                        name: "Sữa trân châu",
+                        btn:'ADD TO CART'
+                    });
+                }}>
                     <Category img={require('../../../img/sua7.png')} Category_name='Sữa' Category_name_product='sữa tươi' />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Shop')}>
+                <TouchableOpacity
+                    onPress={() => {
+                        navigation.navigate('Shop', {
+                            image: require('../../../img/sua6.png'),
+                            name: "Sữa trân châu",
+                            btn:'ADD TO CART'
+                        });
+                    }}>
                     <Category img={require('../../../img/sua6.png')} Category_name='Sữa' Category_name_product='sữa tươi' />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Shop')}>
+                <TouchableOpacity
+                    onPress={() => {
+                        navigation.navigate('Shop', {
+                            image: require('../../../img/sua7.png'),
+                            name: "Sữa trân châu",
+                            btn:'ADD TO CART'
+                        });
+                    }}>
                     <Category img={require('../../../img/sua7.png')} Category_name='Sữa' Category_name_product='sữa tươi' />
                 </TouchableOpacity>
             </ScrollView>
