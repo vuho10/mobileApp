@@ -54,10 +54,6 @@ const Home = ({ navigation }) => {
                     <PopularProduct img={require('../../img/image20.png')} />
                 </TouchableOpacity>
             </ScrollView>
-            {/* <Button
-                title="Go to Details"
-                onPress={() => navigation.navigate('Detail')}
-            /> */}
         </View>
     );
 }
