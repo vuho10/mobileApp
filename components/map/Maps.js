@@ -28,18 +28,12 @@ export default function Maps() {
         showsUserLocation={false}
         zoomEnabled={true}
         zoomControlEnabled={true}
-      >
-
-        
+      >       
         <Marker
           coordinate={{ latitude: 16.033531404445885, longitude: 108.2206544489649 }}
           description={"Vị trí của bạn ở đây nè!!!"}
         />
-        
-
-
-
-        
+       
       </MapView>
       <View style={styles.searchBox}>
         <TextInput

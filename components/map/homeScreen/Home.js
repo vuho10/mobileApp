@@ -37,6 +37,9 @@ const Home = ({ navigation }) => {
                         navigation.navigate('Shop', {
                             image: require('../../../img/sua6.png'),
                             name: "sua tuoi",
+                            latitude:'16.067998898767925',
+                            longitude:'108.22119872956212',
+                            // 16.067998898767925, 108.22119872956212
                             btn:'ADD TO CART'
                         });
                     }}
