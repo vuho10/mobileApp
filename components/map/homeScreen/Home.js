@@ -1,91 +1,49 @@
 import { View, Text, TextInput, SafeAreaView, TouchableOpacity, ScrollView, ScrollViewBase, FlatList } from 'react-native';
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
+import axios from 'axios';
 import styles from '../../../styles';
 import Products from '../Products'
 import Category from '../Category';
-
-import React from 'react';
+import A from './aa';
+import React, { useEffect, useState } from 'react';
 
 const Home = ({ navigation }) => {
 
-    // const ref = React.useRef(null);
+    const [products, setProducts] = useState({
+        isLoaded: false,
+        data: []
 
-    // useScrollToBôt(ref);
+    });
+
+    useEffect(() => {
+        axios.get('https://61bc10c2d8542f001782453f.mockapi.io/Products-axios')
+            .then((res) => {
+                setProducts({
+                    isLoaded: true,
+                    data: res.data
+                })
+            })
+            .catch((err) => console.log(err))
+    }, [
+
+    ])
+
+    const renderItem = ({ item }) => (
+        <ScrollView>
+            <Products products_name={item.productName} products_title={item.rating} prices={item.productPrice} img={item.productImage} />
+        </ScrollView>
+    )
+
     return (
-        <View style={styles.container__Home}>
-            <View style={styles.header}>
-                <Text style={styles.header_text}>Venus</Text>
-                <FontAwesome5 name='bars' style={styles.header__icon} />
-            </View>
-            <View styles={styles.header__form}>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            {products.isLoaded ?
+                <FlatList
+                    data={products.data}
+                    renderItem={renderItem}
+                    keyExtractor={(item) => item.id}
+                />
 
-                {/* <FontAwesome5 name='search' style={styles.header__search} /> */}
-                <View>
-                    {/* <TextInput
-                        style={styles.header__input}
-                        placeholder="useless placeholder"
-                        keyboardType="numeric"
-                    /> */}
-
-                </View>
-
-            </View>
-            <ScrollView horizontal={true} style={styles.Category_container_scr}>
-                <TouchableOpacity
-
-                    onPress={() => {
-                        navigation.navigate('Shop', {
-                            image: require('../../../img/sua6.png'),
-                            name: "sua tuoi",
-                            latitude:'16.067998898767925',
-                            longitude:'108.22119872956212',
-                            // 16.067998898767925, 108.22119872956212
-                            btn:'ADD TO CART'
-                        });
-                    }}
-
-                >
-                    <Category img={require('../../../img/sua6.png')} Category_name='Sữa' Category_name_product='sữa tươi' />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => {
-                    navigation.navigate('Shop', {
-                        image: require('../../../img/sua7.png'),
-                        name: "Sữa trân châu",
-                        btn:'ADD TO CART'
-                    });
-                }}>
-                    <Category img={require('../../../img/sua7.png')} Category_name='Sữa' Category_name_product='sữa tươi' />
-                </TouchableOpacity>
-                <TouchableOpacity
-                    onPress={() => {
-                        navigation.navigate('Shop', {
-                            image: require('../../../img/sua6.png'),
-                            name: "Sữa trân châu",
-                            btn:'ADD TO CART'
-                        });
-                    }}>
-                    <Category img={require('../../../img/sua6.png')} Category_name='Sữa' Category_name_product='sữa tươi' />
-                </TouchableOpacity>
-                <TouchableOpacity
-                    onPress={() => {
-                        navigation.navigate('Shop', {
-                            image: require('../../../img/sua7.png'),
-                            name: "Sữa trân châu",
-                            btn:'ADD TO CART'
-                        });
-                    }}>
-                    <Category img={require('../../../img/sua7.png')} Category_name='Sữa' Category_name_product='sữa tươi' />
-                </TouchableOpacity>
-            </ScrollView>
-            <Text style={styles.text_buy}>WILL BUY</Text>
-            <ScrollView>
-                <Products img={require('../../../img/sua3.webp')} products_name='Sữa mattcha ' products_title='nguyen chat' prices='250 đ' />
-                <Products img={require('../../../img/sua7.png')} products_name='trà sữa trân châu' products_title='nguyen chat' prices='250 đ' />
-                <Products img={require('../../../img/sua6.png')} products_name='sữa chân châu' products_title='nguyen chat' prices='250 đ' />
-                <Products img={require('../../../img/sua3.webp')} products_name=' Suawx ha lan' products_title='nguyen chat' prices='250 đ' />
-                <Products img={require('../../../img/sua6.png')} products_name=' Suawx ha lan' products_title='nguyen chat' prices='250 đ' />
-            </ScrollView>
-
+                : <Text>LOading...</Text>}
         </View>
     )
 }

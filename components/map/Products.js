@@ -5,8 +5,10 @@ const Products = (props) => {
     return (
         <View style={styles.products_container}>
             <View style={styles.product_content}>
-                <Image source={props.img} style={styles.product_img}/>
-            </View>          
+                <Image source={{
+                    uri: `${props.img}`,
+                }} style={styles.product_img} />
+            </View>
             <View>
                 <Text>
                     {props.products_name}

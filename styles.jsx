@@ -220,10 +220,11 @@ const styles = StyleSheet.create({
   // products
   , product_content: {
 
-    backgroundColor: '#a0b74f',
+    // backgroundColor: '#a0b74f',
     borderRadius: 30,
-    overflow: 'hidden',
-    height: 110,
+    // overflow: 'hidden',
+    // height: 110,
+    // width:140,
     alignItems: 'center',
     marginRight: 20,
 
@@ -248,8 +249,9 @@ const styles = StyleSheet.create({
 
   },
   product_img: {
-    width: 140,
-    resizeMode: 'contain',
+    width: 90,
+    resizeMode: 'cover',
+    borderRadius:20,
     height: 100
   },
   product_scroll: {

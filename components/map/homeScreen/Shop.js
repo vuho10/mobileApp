@@ -8,6 +8,7 @@ import Products from '../Products';
 // import { NavigationContainer } from '@react-navigation/native';
 // import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+
 function Shop({ route, navigation, props }) {
 
   const { image } = route.params;
