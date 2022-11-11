@@ -19,15 +19,6 @@ const Home = ({ navigation }) => {
             </View>
             <View styles={styles.header__form}>
 
-                {/* <FontAwesome5 name='search' style={styles.header__search} /> */}
-                <View>
-                    {/* <TextInput
-                        style={styles.header__input}
-                        placeholder="useless placeholder"
-                        keyboardType="numeric"
-                    /> */}
-
-                </View>
 
             </View>
             <ScrollView horizontal={true} style={styles.Category_container_scr}>
@@ -40,7 +31,7 @@ const Home = ({ navigation }) => {
                             latitude:'16.067998898767925',
                             longitude:'108.22119872956212',
                             // 16.067998898767925, 108.22119872956212
-                            btn:'ADD TO CART'
+                            // btn:'ADD TO CART'
                         });
                     }}
 
