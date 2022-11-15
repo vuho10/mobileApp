@@ -4,7 +4,7 @@ import { View, Text, Image, Button } from 'react-native';
 // import { Button } from 'react-native-material-design';
 import styles from '../../../styles';
 import Maps from '../Maps';
-import Products from '../Products';
+// import Products from '../Products';
 // import { NavigationContainer } from '@react-navigation/native';
 // import { createNativeStackNavigator } from '@react-navigation/native-stack';
 

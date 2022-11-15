@@ -1,13 +1,23 @@
 import { View, Text, TextInput, SafeAreaView, TouchableOpacity, ScrollView, ScrollViewBase, FlatList } from 'react-native';
-import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
+// import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import axios from 'axios';
-import styles from '../../../styles';
+// import styles from '../../../styles';
 import Products from '../Products'
-import Category from '../Category';
-import A from './aa';
+// import Category from '../Category';
+// import A from './aa';
 import React, { useEffect, useState } from 'react';
 
 const Home = ({ navigation }) => {
+
+    // <TouchableOpacity onPress={() => {
+    //     navigation.navigate('Shop', {
+    //         image: require('../../../img/sua7.png'),
+    //         name: "Sữa trân châu",
+    //         btn:'ADD TO CART'
+    //     });
+    // }}>
+    //     <Category img={require('../../../img/sua7.png')} Category_name='Sữa' Category_name_product='sữa tươi' />
+    // </TouchableOpacity>
 
     const [products, setProducts] = useState({
         isLoaded: false,
@@ -30,7 +40,9 @@ const Home = ({ navigation }) => {
 
     const renderItem = ({ item }) => (
         <ScrollView>
-            <Products products_name={item.productName} products_title={item.rating} prices={item.productPrice} img={item.productImage} />
+            <TouchableOpacity onPress={() => { navigation.navigate('Shop') }}>
+                <Products products_name={item.productName} products_title={item.rating} prices={item.productPrice} img={item.productImage} />
+            </TouchableOpacity>
         </ScrollView>
     )
 
@@ -40,7 +52,7 @@ const Home = ({ navigation }) => {
                 <FlatList
                     data={products.data}
                     renderItem={renderItem}
-                    keyExtractor={(item) => item.id}
+                // keyExtractor={(item) => item.id}
                 />
 
                 : <Text>LOading...</Text>}
