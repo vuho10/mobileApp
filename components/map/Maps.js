@@ -35,26 +35,7 @@ export default function Maps() {
         />
        
       </MapView>
-      <View style={styles.searchBox}>
-        <TextInput
-          placeholder="Search here"
-          placeholderTextColor="#000"
-          autoCapitalize="none"
-          style={{ flex: 1, padding: 0 }}
-        />
-        <FontAwesome5
-          name="search"
-          size={20}
-          // style={styles.bTabIcon}
-        />
-      </View>
 
-      <SearchBar
-       placeholder="Search"
-       onChangeText={onChangeSearch}
-       value={searchQuery}     
-      >
-      </SearchBar>
     </View>
   )
 }

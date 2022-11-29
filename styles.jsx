@@ -219,12 +219,7 @@ const styles = StyleSheet.create({
   }
   // products
   , product_content: {
-
-    // backgroundColor: '#a0b74f',
     borderRadius: 30,
-    // overflow: 'hidden',
-    // height: 110,
-    // width:140,
     alignItems: 'center',
     marginRight: 20,
 
@@ -248,18 +243,17 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
 
   },
-  product_img: {
-    width: 90,
-    resizeMode: 'cover',
-    borderRadius:20,
-    height: 100
-  },
+  
+  // product_img: {
+  //   width: 90,
+  //   resizeMode: 'cover',
+  //   borderRadius:20,
+  //   height: 100
+  // },
   product_scroll: {
     marginTop: 30,
   },
-  // products_shop: {
-  //   marginTop: 90,
-  // }
+
   details_color: {
     backgroundColor: "#a0b74f",
     // marginTop:-60,
@@ -316,5 +310,56 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
     elevation: 10,
   },
+  // -------------new
+  title_card: {
+    fontSize: 20,
+  },
+  title1: {
+    margin: 0,
+    fontFamily: 'Montserrat, sans-serif',
+    textAlign: 'left',
+    fontSize: 20,
+
+  },
+  title2: {
+    margin: 0,
+    fontFamily: 'Montserrat, sans-serif',
+    textAlign: 'left',
+    
+
+    color: '#9E9E9E',
+    fontStyle: 'italic',
+    fontSize: 15,
+
+  },
+  card: {
+    backgroundColor: '#FFFFFF',
+    margin: 15,
+    maxWidth: 300,
+    textAlign: 'center',
+    borderRadius: 10,
+    // box-shadow: 10px 10px 30px #BDBDBD;
+
+    shadowColor: '#ccc',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
+    elevation: 10,
+  },
+
+  product_img: {
+    width: 204,
+    resizeMode: 'cover',
+    borderTopRightRadius: 10,
+    borderTopLeftRadius: 10,
+    height: 100
+  },
+  card__image: {
+    width: 100,
+    borderRadius: 20,
+  },
+  card__copy: {
+    padding: 20,
+  }
 });
 export default styles;
