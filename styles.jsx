@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -9,20 +9,16 @@ const styles = StyleSheet.create({
   },
   pathContent: {
     paddingTop: 10,
-    flexDirection: "row",
-
+    flexDirection: 'row',
   },
   pathText: {
     marginLeft: 10,
-    fontWeight: "700",
+    fontWeight: '700',
     fontSize: 16,
-
-
   },
   pathImg: {
     width: 24,
     height: 24,
-
   },
   banner: {
     height: 140,
@@ -30,7 +26,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     position: 'relative',
     marginTop: 18,
-    width: '100%'
+    width: '100%',
   },
   banner__img: {
     width: '100%',
@@ -40,14 +36,13 @@ const styles = StyleSheet.create({
     top: 28,
     left: 24,
     maxWidth: 124,
-    color: "FFC000",
-
+    color: 'FFC000',
   },
   banner__content__title: {
     color: '#1987FB',
     fontWeight: '700',
     fontSize: 18,
-    lineHeight: 21
+    lineHeight: 21,
   },
   banner__content__desc: {
     color: 'black',
@@ -61,8 +56,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
   },
   star: {
-    color: '#FFFFFF'
-
+    color: '#FFFFFF',
   },
 
   // Product
@@ -84,11 +78,11 @@ const styles = StyleSheet.create({
     width: '100%',
     resizeMode: 'cover',
     // position:"relative",
-    height: 100
+    height: 100,
   },
 
   black: {
-    color: 'black'
+    color: 'black',
   },
 
   titlePo: {
@@ -99,29 +93,22 @@ const styles = StyleSheet.create({
     marginRight: 20,
     // backgroundColor:"yellow",
     borderRadius: 10,
-    position: "relative",
-
+    position: 'relative',
   },
 
   allProduct: {
     marginTop: -120,
     marginBottom: 10,
-
   },
   // PopularProduct
   sales: {
-    backgroundColor: "#ff5a5a",
+    backgroundColor: '#ff5a5a',
     marginTop: -30,
     marginLeft: -30,
     height: 70,
     width: 80,
 
-
-    transform: [
-      { rotate: "-45deg" },
-
-    ]
-
+    transform: [{rotate: '-45deg'}],
   },
   textSale: {
     marginTop: 40,
@@ -150,9 +137,6 @@ const styles = StyleSheet.create({
     // flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-
-
-
   },
   header_text: {
     marginRight: 290,
@@ -162,18 +146,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   header__form: {
-    flexDirection: "row",
-
-
+    flexDirection: 'row',
   },
-  header__search: {
-
-
-  },
-  header__input: {
-
-
-  },
+  header__search: {},
+  header__input: {},
 
   // -------------------------------category
   // Category_container_scr:{
@@ -184,16 +160,13 @@ const styles = StyleSheet.create({
     marginBottom: 130,
     alignItems: 'center',
     marginRight: 35,
-
   },
   Category_name: {
     fontSize: 15,
     marginBottom: 10,
     // alignItems:'center',
-
   },
   Category_content: {
-
     backgroundColor: '#a0b74f',
     borderRadius: 40,
     overflow: 'hidden',
@@ -203,37 +176,33 @@ const styles = StyleSheet.create({
   Category_name_product: {
     marginTop: 10,
     fontSize: 14,
-
   },
 
   Category_img: {
     width: 140,
     resizeMode: 'contain',
-    height: 100
-  }
+    height: 100,
+  },
 
-  , text_buy: {
+  text_buy: {
     marginBottom: 10,
     fontWeight: 'bold',
-
-  }
+  },
   // products
-  , product_content: {
+  product_content: {
     borderRadius: 30,
     alignItems: 'center',
     marginRight: 20,
-
-  }
-  , products_container: {
+  },
+  products_container: {
     flexDirection: 'row',
     backgroundColor: '#F5F5F5',
     marginBottom: 20,
-
   },
   products_name: {
     marginTop: 50,
     fontSize: 40,
-    color: "black",
+    color: 'black',
     marginBottom: 20,
     fontWeight: 'bold',
   },
@@ -241,9 +210,8 @@ const styles = StyleSheet.create({
     fontSize: 15,
     marginLeft: 80,
     fontWeight: 'bold',
-
   },
-  
+
   // product_img: {
   //   width: 90,
   //   resizeMode: 'cover',
@@ -255,14 +223,15 @@ const styles = StyleSheet.create({
   },
 
   details_color: {
-    backgroundColor: "#a0b74f",
+    backgroundColor: '#a0b74f',
     // marginTop:-60,
   },
   products_detail: {
     width: 300,
     resizeMode: 'contain',
-    height: 500
-  }, shop_details: {
+    height: 500,
+  },
+  shop_details: {
     // backgroundColor: "#a0b74f",
     alignItems: 'center',
     marginTop: 100,
@@ -271,8 +240,7 @@ const styles = StyleSheet.create({
     marginTop: -200,
     marginLeft: 30,
     fontSize: 20,
-    color: "#ffa0a0"
-
+    color: '#ffa0a0',
   },
 
   btn_add_to_cart: {
@@ -283,29 +251,29 @@ const styles = StyleSheet.create({
     height: 30,
     alignItems: 'center',
     alignSelf: 'flex-end',
-    shadowColor: "#000",
+    shadowColor: '#000',
 
     shadowOffset: {
       width: 0,
       height: 6,
     },
     shadowOpacity: 0.39,
-    shadowRadius: 8.30,
+    shadowRadius: 8.3,
 
     elevation: 13,
   },
 
   searchBox: {
-    // position:'absolute', 
+    // position:'absolute',
     marginBottom: -250,
-    flexDirection: "row",
+    flexDirection: 'row',
     backgroundColor: '#fff',
     width: '90%',
     alignSelf: 'center',
     borderRadius: 5,
     padding: 10,
     shadowColor: '#ccc',
-    shadowOffset: { width: 0, height: 3 },
+    shadowOffset: {width: 0, height: 3},
     shadowOpacity: 0.5,
     shadowRadius: 5,
     elevation: 10,
@@ -319,18 +287,15 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat, sans-serif',
     textAlign: 'left',
     fontSize: 20,
-
   },
   title2: {
     margin: 0,
     fontFamily: 'Montserrat, sans-serif',
     textAlign: 'left',
-    
 
     color: '#9E9E9E',
     fontStyle: 'italic',
     fontSize: 15,
-
   },
   card: {
     backgroundColor: '#FFFFFF',
@@ -341,25 +306,44 @@ const styles = StyleSheet.create({
     // box-shadow: 10px 10px 30px #BDBDBD;
 
     shadowColor: '#ccc',
-    shadowOffset: { width: 0, height: 3 },
+    shadowOffset: {width: 0, height: 3},
     shadowOpacity: 0.5,
     shadowRadius: 5,
     elevation: 10,
   },
 
   product_img: {
-    width: 204,
-    resizeMode: 'cover',
-    borderTopRightRadius: 10,
-    borderTopLeftRadius: 10,
-    height: 100
+    width: 200,
+    // resizeMode: 'cover',
+    // borderTopRightRadius: 10,
+    // borderTopLeftRadius: 10,
+    height: 100,
   },
-  card__image: {
-    width: 100,
-    borderRadius: 20,
-  },
+  // card__image: {
+  //   width: 200,
+  //   borderRadius: 20,
+  // },
   card__copy: {
-    padding: 20,
+    margin:10,
+  },
+// card_image:{
+//   padding: 20,
+
+// },
+  // 
+  textInputStyle: {
+    height: 40,
+    borderWidth: 1,
+    paddingLeft: 20,
+    margin: 5,
+    // paddingBottom:50,
+    // marginBottom:50,
+    borderColor: '#009688',
+    backgroundColor: '#FFFFFF',
+  },
+  content:{
+   
+    // backgroundColor: '#8BC34A'
   }
 });
 export default styles;

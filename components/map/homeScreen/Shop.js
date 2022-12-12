@@ -1,23 +1,18 @@
 import react from 'react';
-import { View, Text, Image, Button } from 'react-native';
+import {View, Text, Image, Button, TouchableOpacity} from 'react-native';
 
 import styles from '../../../styles';
 import Maps from '../Maps';
 
-
-function Shop({ route, navigation, props }) {
-
+function Shop({route,navigation}) {
   return (
     <View>
-      <Maps/>
-      <View style={styles.shop_details}>
-      </View>     
-      <Text>
-        hello so lau ly
-      </Text>
-      
-      
+      <Maps route={route} navigation={navigation} />
+      <View style={styles.shop_details}></View>
     </View>
+    // <TouchableOpacity onPress={() => navigation.goBack()} >
+
+    // </TouchableOpacity>
   );
 }
 
